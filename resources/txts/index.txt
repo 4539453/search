@@ -1,0 +1,115 @@
+142,142.txt,The $30,000 Bequest, and Other Stories,Mark Twain
+7031,7031.txt,The Sheik: A Novel,E. M. Hull
+3858,3858.txt,Memoirs of the Court of Louis XIV. and of the Regency — Volume 04,Orléans
+2439,2439.txt,The History of England, from the Accession of James II — Volume 2,Macaulay
+1929,1929.txt,The School for Scandal,Richard Brinsley Sheridan
+1416,1416.txt,Mrs. Lirriper's Lodgings,Charles Dickens
+1331,1331.txt,ABC's of Science,Charles A. Oliver
+260,260.txt,An Introduction to the Study of Robert Browning's Poetry,Browning and Corson
+6502,6502.txt,The Acadian Exiles : a Chronicle of the Land of Evangeline,Sir Arthur G. Doughty
+4984,4984.txt,The Hidden Children,Robert W. Chambers
+6153,6153.txt,Athens: Its Rise and Fall, Book III,Baron Edward Bulwer Lytton Lytton
+7075,7075.txt,The Idol of Paris,Sarah Bernhardt
+2779,2779.txt,Mein Leben und Streben,Karl May
+1,1.txt,The Declaration of Independence of the United States of America,Thomas Jefferson
+5260,5260.txt,A Duet, with an Occasional Chorus,Arthur Conan Doyle
+2192,2192.txt,The Dark Flower,John Galsworthy
+5408,5408.txt,The Rubaiyat of Omar Khayyam Jr.,Wallace Irwin
+2036,2036.txt,Eight Years' Wanderings in Ceylon,Sir Samuel White Baker
+4129,4129.txt,Diary of Samuel Pepys — Volume 12: September/October 1661,Samuel Pepys
+8593,8593.txt,Normandy, Illustrated, Part 1,Gordon Home
+819,819.txt,The History of the Telephone,Herbert Newton Casson
+6528,6528.txt,Sagradas Escrituras Version Antigua,Russell Stendal
+3902,3902.txt,The Confessions of Jean Jacques Rousseau — Volume 02,Jean-Jacques Rousseau
+8101,8101.txt,Bertram Cope's Year,Henry Blake Fuller
+4627,4627.txt,The Lights and Shadows of Real Life,T. S. Arthur
+1480,1480.txt,Tom Brown's School Days,Thomas Hughes
+5721,5721.txt,A House of Gentlefolk,Ivan Sergeevich Turgenev
+3323,3323.txt,The Ward of King Canute: A Romance of the Danish Conquest,Liljencrantz
+9963,9963.txt,Elsie's Girlhood,Martha Finley
+70,70.txt,What Is Man? and Other Essays,Mark Twain
+6261,6261.txt,The Weavers: a tale of England and Egypt of fifty years ago - Volume 1,Parker
+7657,7657.txt,Kenelm Chillingly — Volume 08,Baron Edward Bulwer Lytton Lytton
+1261,1261.txt,Betty Zane,Zane Grey
+2804,2804.txt,Rose in Bloom,Louisa May Alcott
+6208,6208.txt,The Trail of the Sword, Volume 3,Gilbert Parker
+7410,7410.txt,The Minister's Charge; Or, The Apprenticeship of Lemuel Barker,Howells
+2734,2734.txt,Gwaith Twm o'r Nant,Thomas Edwards
+9094,9094.txt,Wild Flowers; or, Pastoral and Local Poetry,Robert Bloomfield
+7801,7801.txt,Five Little Friends,Sherred Willcox Adams
+5734,5734.txt,Life in the Grey Nunnery at Montreal,Sarah J. Richardson
+3576,3576.txt,Recollections of the Private Life of Napoleon — Volume 09,Louis Constant Wairy
+6372,6372.txt,The Wonder-Working Magician,Pedro Calderón de la Barca
+121,121.txt,Northanger Abbey,Jane Austen
+5221,5221.txt,The Satyricon — Volume 04 : Escape,Sea by Petronius Arbiter
+8415,8415.txt,The Magician's Show Box, and Other Stories,Child and Tappan
+1466,1466.txt,Creatures That Once Were Men,Maksim Gorky
+6530,6530.txt,The Gospel of Mark for Readers,Lightheart
+5943,5943.txt,The History of Don Quixote, Volume 2, Part 40,Miguel de Cervantes Saavedra
+1062,1062.txt,First Project Gutenberg Collection of Edgar Allan Poe,Edgar Allan Poe
+4168,4168.txt,Diary of Samuel Pepys — Volume 46: October 1666,Samuel Pepys
+8845,8845.txt,Weymouth New Testament in Modern Speech, Philemon,Richard Francis Weymouth
+6018,6018.txt,The Journal of a Tour to the Hebrides with Samuel Johnson, LL.D.,James Boswell
+8047,8047.txt,The Bible, King James version, Book 47: 2 Corinthians,Anonymous
+9872,9872.txt,The Great Secret,E. Phillips Oppenheim
+8589,8589.txt,Roughing It, Part 8.,Mark Twain
+6339,6339.txt,The Boy Scouts on a Submarine,John Blaine
+7911,7911.txt,American Historical and Literary Curiosities, Part 11.,J. Jay Smith
+8130,8130.txt,Glimpses of Unfamiliar Japan: First Series,Lafcadio Hearn
+7199,7199.txt,The Adventures of Tom Sawyer, Part 7.,Mark Twain
+8741,8741.txt,The Brass Bowl,Louis Joseph Vance
+5176,5176.txt,Corpus of a Siam Mosquito,Steven David Justin Sills
+3257,3257.txt,New Thought Pastels,Ella Wheeler Wilcox
+689,689.txt,The Kreutzer Sonata and Other Stories,graf Leo Tolstoy
+9909,9909.txt,Nightmare Abbey,Thomas Love Peacock
+7811,7811.txt,The War Romance of the Salvation Army,Evangeline Booth and Grace Livingston Hill
+5370,5370.txt,Richard Carvel — Volume 06,Winston Churchill
+6983,6983.txt,Missionary Work Among the Ojebway Indians,Edward Francis Wilson
+7897,7897.txt,The Gray Goose's Story,Amy Prentice
+7667,7667.txt,What Will He Do with It? — Volume 09,Baron Edward Bulwer Lytton Lytton
+2800,2800.txt,The Koran (Al-Qur'an),G. Margoliouth and J. M. Rodwell
+9971,9971.txt,The Dramatic Works of Gerhart Hauptmann, Volume I,Gerhart Hauptmann
+6098,6098.txt,Amelia — Complete,Henry Fielding
+299,299.txt,Tales from Two Hemispheres,Hjalmar Hjorth Boyesen
+5999,5999.txt,Guy Mannering; or, The Astrologer — Complete,Walter Scott
+5163,5163.txt,Guy Garrick,Arthur B. Reeve
+7074,7074.txt,Beauty and the Beast,Madame Leprince de Beaumont
+4436,4436.txt,Vittoria — Volume 2,George Meredith
+3104,3104.txt,The Golden House,Charles Dudley Warner
+5760,5760.txt,Two Trips to Gorilla Land and the Cataracts of the Congo, Volume 1,Burton
+7073,7073.txt,Specimens of Greek Tragedy — Aeschylus and Sophocles,Aeschylus and Sophocles
+9583,9583.txt,Occasional Poems,John Greenleaf Whittier
+5208,5208.txt,The Parish Register,George Crabbe
+276,276.txt,Franz Haydn's 104th Symphony [1794-5],Joseph Haydn
+5347,5347.txt,Understood Betsy,Dorothy Canfield Fisher
+8742,8742.txt,Scientific American Supplement, No. 392, July 7, 1883,Various
+7834,7834.txt,Wagner's "Tristan und Isolde": An Essay on the Wagnerian Drama,Hight
+318,318.txt,John Barleycorn,Jack London
+1889,1889.txt,Bird Neighbors,Neltje Blanchan
+7714,7714.txt,"My Novel" — Complete,Baron Edward Bulwer Lytton Lytton
+5359,5359.txt,The Inside of the Cup — Volume 04,Winston Churchill
+2464,2464.txt,History of Florence and of the Affairs of Italy,Niccolò Machiavelli
+366,366.txt,Bab: A Sub-Deb,Mary Roberts Rinehart
+6850,6850.txt,Esther : a book for girls,Rosa Nouchette Carey
+3565,3565.txt,Memoirs of Napoleon Bonaparte — Volume 15,Louis Antoine Fauvelet de Bourrienne
+9644,9644.txt,Littérature et Philosophie mêlées,Victor Hugo
+3852,3852.txt,Memoirs of Madame la Marquise de Montespan — Volume 6,Montespan
+2265,2265.txt,Hamlet,William Shakespeare
+7919,7919.txt,American Historical and Literary Curiosities, Part 19.,J. Jay Smith
+4453,4453.txt,Beauchamp's Career — Volume 1,George Meredith
+445,445.txt,The Crowd: A Study of the Popular Mind,Gustave Le Bon
+1997,1997.txt,The Divine Comedy, Volume 3, Paradise,Dante Alighieri
+7570,7570.txt,Widger's Quotes and Images from Cosmopolis,Paul Bourget by Paul Bourget
+5045,5045.txt,State of the Union Addresses,Jimmy Carter
+764,764.txt,Hans Brinker; Or, The Silver Skates,Mary Mapes Dodge
+2176,2176.txt,Seven Discourses on Art,Sir Joshua Reynolds
+8695,8695.txt,The Poetical Works of Beattie, Blair, and Falconer,Beattie, Blair, and Falconer
+5657,5657.txt,The Practice of the Presence of God,Brother of the Resurrection Lawrence
+8724,8724.txt,The Three Cities Trilogy: Rome, Volume 4,Émile Zola
+4829,4829.txt,The Rise of the Dutch Republic — Volume 27: 1577-78,John Lothrop Motley
+3567,3567.txt,Memoirs of Napoleon Bonaparte — Complete,Louis Antoine Fauvelet de Bourrienne
+2170,2170.txt,Miscellaneous Writings and Speeches — Volume 4,Macaulay
+7028,7028.txt,The Clicking of Cuthbert,P. G. Wodehouse
+6127,6127.txt,The Great Stone of Sardis,Frank Richard Stockton
+3496,3496.txt,The Japanese Twins,Lucy Fitch Perkins
+6810,6810.txt,Christopher Columbus,Mildred Stapley Byne
