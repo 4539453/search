@@ -1,11 +1,9 @@
 #include "util/TermIDMapper.h"
 #include "util/SimpleTokenizer.h"
-#include "util/StringSupplier.h"
 #include <boost/archive/text_oarchive.hpp>
 #include <boost/serialization/serialization.hpp>
 #include <boost/serialization/unordered_map.hpp>
 #include <fstream>
-#include <string>
 #include <vector>
 
 TermIDMapper::TermIDMapper(class StringSupplier &StringSupplier)

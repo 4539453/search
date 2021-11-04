@@ -1,10 +1,7 @@
 #include "IndexFileBasedDocSupplier.h"
-#include "Document.h"
 #include <boost/algorithm/string.hpp>
 #include <fstream>
 #include <sstream>
-#include <string>
-#include <vector>
 
 IndexFileBasedDocSupplier::IndexFileBasedDocSupplier(std::string DocFilesRoot,
                                                      std::string IndexFileName)

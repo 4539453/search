@@ -1,11 +1,7 @@
 #include "InvertedIndex.h"
-#include "DocumentSupplier.h"
-#include "TermIDMapping.h"
-#include "util/Tokenizer.h"
 
 #include <algorithm>
 #include <functional>
-#include <set>
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -16,8 +12,11 @@ InvertedIndex::~InvertedIndex() {}
 
 void InvertedIndex::build(DocumentSupplier &DocumentSupplier,
                           Tokenizer &Tokenizer, TermIDMapping &TermIDMapping) {
+  std::cout << "Building Inverted Index...\n";
+  
   std::function<std::string(Document)> getTextOfDocument =
       [](Document Document) -> std::string {
+//        std::cout << "Getting text of document \""<<Document.getTitle() << "\"\n";
     std::string DocText = "";
     std::string FilePath = Document.getFilePath();
     std::ifstream Ifs(FilePath, std::ios::in | std::ios::binary);
@@ -42,8 +41,10 @@ void InvertedIndex::build(DocumentSupplier &DocumentSupplier,
 }
 
 void InvertedIndex::addPostingsList(PostingsList &OtherPostingsList) {
+ // std::cout << "Adding PostingsList of term with id " << OtherPostingsList.termID() << "\n";
   auto PostingsListIter = PostingsListSet.find(OtherPostingsList); 
   if (PostingsListIter != PostingsListSet.end()) {
+  //  std::cout << "Merging with existing PostingsList...\n";
     PostingsList CombinedPostingsList(PostingsListIter->termID(), PostingsListIter->termRecords());
     PostingsListSet.erase(*PostingsListIter);
     for (auto &TermRecordOut : OtherPostingsList.termRecords()) {
@@ -53,6 +54,7 @@ void InvertedIndex::addPostingsList(PostingsList &OtherPostingsList) {
     PostingsListSet.insert(CombinedPostingsList);
     return;
   }
+ // std::cout << "Inserting into PostingsListSet...\n";
   PostingsListSet.insert(OtherPostingsList);
 }
 
@@ -63,5 +65,6 @@ InvertedIndex::getRecordsOfTermWithID(unsigned int TermID) const {
   if (PostingsListIter != PostingsListSet.end()) {
     return PostingsListIter->termRecords();
   }
+  // std::cout << "No term records found for term with id " << TermID << '\n';
   return {};
 }

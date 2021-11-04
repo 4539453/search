@@ -1,4 +1,3 @@
-#include "PostingsList.h"
 #include "compare/PostingsListCompare.h"
 
 bool PostingsListCompare::operator() (const PostingsList &LPostingsList,

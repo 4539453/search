@@ -1,7 +1,6 @@
 #ifndef INDEX_FILE_BASED_DOC_SUPPLIER_H
 #define INDEX_FILE_BASED_DOC_SUPPLIER_H
 
-#include "Document.h"
 #include "DocumentSupplier.h"
 #include <string>
 #include <vector>

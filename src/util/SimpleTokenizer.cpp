@@ -1,10 +1,7 @@
 #include "util/SimpleTokenizer.h"
+
 #include <algorithm>
 #include <functional>
-#include <map>
-#include <memory>
-#include <string>
-#include <vector>
 
 std::vector<std::string> *SimpleTokenizer::tokenize(std::string Text) {
   std::vector<std::string> *Words = new std::vector<std::string>();

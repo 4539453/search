@@ -1,4 +1,3 @@
-#include "TermRecord.h"
 #include "compare/TermRecordCompare.h"
 
 bool TermRecordCompare::operator() (const TermRecord &LTermRecord,

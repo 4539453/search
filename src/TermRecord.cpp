@@ -1,5 +1,4 @@
 #include "TermRecord.h"
-#include <vector>
 
 TermRecord::TermRecord(unsigned int DocID) : DocID{DocID} {}
 
