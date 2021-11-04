@@ -6,14 +6,14 @@
 class Document {
 protected:
   int Id;
-  std::string FileName;
+  std::string FilePath;
   std::string Title;
   std::string Author;
 
 public:
-  Document(int Id, std::string FileName, std::string Title, std::string Author);
+  Document(int Id, std::string FilePath, std::string Title, std::string Author);
   int getID();
-  std::string getFileName();
+  std::string getFilePath();
   std::string getTitle();
   std::string getAuthor();
 };

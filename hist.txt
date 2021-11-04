@@ -92,7 +92,216 @@
   777  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/TermIDMappingTest.cpp -lboost_serialization
   778  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/TermIDMappingTest.cpp -lboost_serialization src/util/DocumentIndexFileBasedStringSupplier.cpp src/util/TermIDMapper.cpp 
   779  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/TermIDMappingTest.cpp -lboost_serialization src/util/DocumentIndexFileBasedStringSupplier.cpp src/util/TermIDMapper.cpp 
-  780  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/TermIDMappingTest.cpp -lboost_serialization src/util/DocumentIndexFileBasedStringSupplier.cpp src/util/TermIDMapper.cpp src/util/SimpleTokenizer.cpp 
+  780  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/TermIDMappingTest.cpp -lboost_serialization src/util/DocumentIndexFileBasedStringSupplier.cpp src/util/TermIDMapper.cpp src/util/SimpleTokenizer.cpp
   781  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/TermIDMappingTest.cpp -lboost_serialization src/util/DocumentIndexFileBasedStringSupplier.cpp src/util/TermIDMapper.cpp src/util/SimpleTokenizer.cpp src/TermIDMapping.cpp 
   782  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/TermIDMappingTest.cpp -lboost_serialization src/util/DocumentIndexFileBasedStringSupplier.cpp src/util/TermIDMapper.cpp src/util/SimpleTokenizer.cpp src/TermIDMapping.cpp src/Document.cpp 
   810  history | grep clang++ > hist.txt 
+  108  clang++ MemberClass.cpp 
+  110  clang++ MemberClass.cpp 
+  112  clang++ MemberClass.cpp 
+  114  clang++ MemberClass.cpp 
+  116  clang++ MemberClass.cpp 
+  118  clang++ MemberClass.cpp 
+  120  clang++ MemberClass.cpp 
+  122  clang++ MemberClass.cpp 
+  127  clang++ MemberClass.cpp 
+  129  clang++ MemberClass.cpp 
+  131  clang++ MemberClass.cpp 
+  134  clang++ MemberClass.cpp 
+  140  clang++ MemberClass2.cpp 
+  142  clang++ MemberClass2.cpp 
+  144  clang++ MemberClass2.cpp 
+  146  clang++ MemberClass2.cpp 
+  148  clang++ MemberClass2.cpp 
+  150  clang++ -std=c++17 MemberClass2.cpp 
+  158  clang++ -std=c++17 ReturnArray.cpp 
+  160  clang++ -std=c++17 ReturnArray.cpp 
+  162  clang++ -std=c++17 ReturnArray.cpp 
+  164  clang++ -std=c++17 ReturnArray.cpp 
+  166  clang++ -std=c++17 ReturnArray.cpp 
+  168  clang++ -std=c++17 ReturnArray.cpp 
+  170  clang++ -std=c++17 ReturnArray.cpp 
+  172  clang++ -std=c++17 ReturnArray.cpp 
+  176  clang++ -std=c++17 ReturnArray.cpp 
+  179  clang++ -std=c++17 ReturnArray.cpp 
+  181  clang++ -std=c++17 ReturnArray.cpp 
+  184  clang++ -std=c++17 ReturnArray.cpp 
+  188  clang++ -std=c++17 ReturnArray.cpp 
+  191  clang++ -std=c++17 ReturnArray.cpp 
+  194  clang++ -std=c++17 ReturnArray.cpp 
+  210  clang++ -std=c++17 read-from-file.cpp 
+  212  clang++ -std=c++17 read-from-file.cpp 
+  215  clang++ -std=c++17 read-from-file.cpp 
+  217  clang++ -std=c++17 read-from-file.cpp 
+  234  clang++ -std=c++17 Return
+  235  clang++ -std=c++17 ReturnVectorData.cpp 
+  237  clang++ -std=c++17 ReturnVectorData.cpp 
+  246  clang++ -std=c++17 -O ReturnVectorData.cpp 
+  252  clang++ -std=c++17 -O ReturnVectorData.cpp 
+  255  clang++ -std=c++17 -O ReturnVectorData.cpp 
+  257  clang++ -std=c++17 -O ReturnVectorData.cpp 
+  260  clang++ -std=c++17 -O ReturnVectorData.cpp 
+  340  man clang++
+  341  man clang++
+  342  clang++ sample1_unittest.cc sample1.h sample1.cc gtest_main.cc -o sample1
+  343  clang++ sample1_unittest.cc sample1.h sample1.cc gtest_main.cc
+  352  clang++ -std=c++11 -stdlib=libc++  sample1_unittest.cc sample1.cc gtest_main.cc -lgtest -lpthread -o sample1  
+  353  clang++ -std=c++11 -stdlib=libc++  sample1_unittest.cc sample1.cc gtest_main.cc -o sample1  
+  354  clang++ -std=c++11 -stdlib=libc++  sample1_unittest.cc sample1.cc gtest_main.cc -lgtest -lpthread -o sample1  
+  356  clang++ sample1_unittest.cc sample1.cc gtest_main.cc -lgtest -lpthread -o sample1  
+  361  clang++ sample1_unittest.cc sample1.cc gtest_main.cc -lgtest -lpthread -o sample1  
+  502  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp
+  503  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp
+  504  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp
+  505  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp
+  506  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp
+  507  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp
+  508  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp
+  509  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp
+  510  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp
+  511  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp
+  512  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp
+  513  clang++ -std=c++17 src/TermRecord.cpp -c
+  514  clang++ -std=c++17 -I include -c src/TermRecord.cpp
+  515  clang++ -std=c++17 -I include -c src/PostingsList.cpp 
+  516  clang++ -std=c++17 -I include -c src/PostingsList.cpp 
+  517  clang++ -std=c++17 -I include -c src/PostingsList.cpp src/TermRecord.cpp 
+  520  clang++ -std=c++17 -I include -c src/PostingsList.cpp src/TermRecord.cpp 
+  531  clang++ -std=c++17 -I include -c src/InvertedIndex.cpp 
+  532  clang++ -std=c++17 -I include -c src/InvertedIndex.cpp
+  533  clang++ -std=c++17 -I include -c src/InvertedIndex.cpp
+  534  clang++ -std=c++17 -I include -c src/InvertedIndex.cpp
+  535  clang++ -std=c++17 -I include -c src/InvertedIndex.cpp
+  536  clang++ -std=c++17 -I include -c src/InvertedIndex.cpp
+  537  clang++ -std=c++17 -I include -c src/InvertedIndex.cpp
+  538  clang++ -std=c++17 -I include -c src/InvertedIndex.cpp
+  539  clang++ -std=c++17 -I include -c src/InvertedIndex.cpp
+  541  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp
+  542  clang++ -std=c++17 -lgtest -lpthread -lboost_serialization -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp
+  543  clang++ -std=c++17 -lgtest -lpthread -lboost_serialization -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp src/Document.cpp 
+  544  clang++ -std=c++17 -lgtest -lpthread -lboost_serialization -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp src/Document.cpp src/compare/TermRecordCompare.cpp 
+  545  clang++ -std=c++17 -lgtest -lpthread -lboost_serialization -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp src/Document.cpp src/compare/TermRecordCompare.cpp 
+  546  clang++ -std=c++17 -lgtest -lpthread -lboost_serialization -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp src/Document.cpp src/compare/TermRecordCompare.cpp 
+  547  clang++ -std=c++17 -lgtest -lpthread -lboost_serialization -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp src/Document.cpp src/compare/TermRecordCompare.cpp src/compare/PostingsListCompare.cpp 
+  548  clang++ -std=c++17 -lgtest -lpthread -lboost_serialization -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp src/Document.cpp src/compare/TermRecordCompare.cpp src/compare/PostingsListCompare.cpp 
+  553  clang++ -std=c++17 -lgtest -lpthread -lboost_serialization -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp src/Document.cpp src/compare/TermRecordCompare.cpp src/compare/PostingsListCompare.cpp 
+  554  clang++ -std=c++17 -lgtest -lpthread -lboost_serialization -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp src/Document.cpp src/compare/TermRecordCompare.cpp src/compare/PostingsListCompare.cpp 
+  557  clang++ -std=c++17 -lgtest -lpthread -lboost_serialization -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp src/Document.cpp src/compare/TermRecordCompare.cpp src/compare/PostingsListCompare.cpp 
+  559  clang++ -std=c++17 -lgtest -lpthread -lboost_serialization -I include test/gtest_main.cc test/InvertedIndexTest.cpp src/InvertedIndex.cpp src/IndexFileBasedDocSupplier.cpp src/PostingsList.cpp src/TermRecord.cpp src/TermIDMapping.cpp src/util/SimpleTokenizer.cpp src/Document.cpp src/compare/TermRecordCompare.cpp src/compare/PostingsListCompare.cpp 
+  561  history | grep clang++ >> hist.txt 
+  504  clang++ -std=c++17 -c -I include src/Document.cpp 
+  508  clang++ -std=c++17 -c -I include src/Document.cpp 
+  510  clang++ -std=c++17 -c -I include src/Document.cpp 
+  512  clang++ -std=c++17 -c -I include src/Document.cpp 
+  514  clang++ -std=c++17 -c -I include src/Document.cpp 
+  518  clang++ -I include -std=c++17 src/util/TermIDMapper.cpp 
+  519  clang++ -I include -std=c++17 src/util/TermIDMapper.cpp -lboost_serialization
+  523  clang++ -I include -std=c++17 src/util/TermIDMapper.cpp -lboost_serialization
+  524  clang++ -I include -std=c++17 src/util/TermIDMapper.cpp -lboost_serialization -c
+  525  clang++ -I include -std=c++17 src/util/TermIDMapper.cpp -c
+  536  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/SimpleTokenizer.cpp test/SimpleTokenizerTest.cpp -o tokenizer
+  537  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/SimpleTokenizer.cpp test/util/SimpleTokenizerTest.cpp -o tokenizer
+  540  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/SimpleTokenizer.cpp test/util/SimpleTokenizerTest.cpp -o tokenizer
+  542  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/SimpleTokenizer.cpp test/util/SimpleTokenizerTest.cpp -o tokenizer
+  547  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/TermIDMapper.cpp test/util/TermIDMapperTest.cpp -o build/termidmapper
+  549  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/TermIDMapper.cpp test/util/TermIDMapperTest.cpp -o build/termidmapper
+  552  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/TermIDMapper.cpp test/util/TermIDMapperTest.cpp -o build/termidmapper
+  554  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/TermIDMapper.cpp test/util/TermIDMapperTest.cpp -o build/termidmapper
+  560  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/TermIDMapper.cpp test/util/TermIDMapperTest.cpp -o build/termidmapper >> error.txt
+  563  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/TermIDMapper.cpp test/util/TermIDMapperTest.cpp -o build/termidmapper -lboost_serialization
+  568  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/TermIDMapper.cpp test/util/TermIDMapperTest.cpp -o build/termidmapper -lboost_serialization
+  569  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/TermIDMapper.cpp test/util/TermIDMapperTest.cpp src/util/SimpleTokenizer.cpp -o build/termidmapper -lboost_serialization
+  573  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/TermIDMapper.cpp test/util/TermIDMapperTest.cpp -o build/termidmapper -lboost_serialization
+  575  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/TermIDMapper.cpp test/util/TermIDMapperTest.cpp -o build/termidmapper -lboost_serialization
+  576  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/TermIDMapper.cpp test/util/TermIDMapperTest.cpp src/util/SimpleTokenizer.cpp -o build/termidmapper -lboost_serialization
+  584  clang++ -std=c++17 -c src/util/DocumentIndexFileBasedStringSupplier.cpp 
+  585  clang++ -std=c++17 -c src/util/DocumentIndexFileBasedStringSupplier.cpp -I include
+  587  clang++ -std=c++17 -c src/util/DocumentIndexFileBasedStringSupplier.cpp -I include
+  589  clang++ -std=c++17 -c src/util/DocumentIndexFileBasedStringSupplier.cpp src/Document.cpp -I include
+  590  clang++ -std=c++17 -c src/util/DocumentIndexFileBasedStringSupplier.cpp src/Document.cpp -I include
+  592  clang++ -std=c++17 -c src/util/DocumentIndexFileBasedStringSupplier.cpp src/Document.cpp -I include
+  594  clang++ -std=c++17 -c src/util/DocumentIndexFileBasedStringSupplier.cpp src/Document.cpp -I include
+  597  clang++ -std=c++17 -c src/util/DocumentIndexFileBasedStringSupplier.cpp src/Document.cpp -I include
+  599  clang++ -std=c++17 -c src/util/DocumentIndexFileBasedStringSupplier.cpp src/Document.cpp -I include
+  601  clang++ -std=c++17 -c src/util/DocumentIndexFileBasedStringSupplier.cpp src/Document.cpp -I include
+  604  clang++ -std=c++17 -c src/util/DocumentIndexFileBasedStringSupplier.cpp src/Document.cpp -I include
+  606  clang++ -std=c++17 -c src/util/DocumentIndexFileBasedStringSupplier.cpp src/Document.cpp -I include
+  608  clang++ -std=c++17 -c src/util/DocumentIndexFileBasedStringSupplier.cpp src/Document.cpp -I include
+  610  clang++ -std=c++17 -c src/util/DocumentIndexFileBasedStringSupplier.cpp src/Document.cpp -I include
+  611  clang++ -std=c++17 -c src/util/DocumentIndexFileBasedStringSupplier.cpp -I include
+  612  clang++ -c src/util/DocumentIndexFileBasedStringSupplier.cpp -I include
+  613  clang++ -std=c++17 -c src/util/DocumentIndexFileBasedStringSupplier.cpp -I include
+  643  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp 
+  644  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp include/util/DocumentIndexFileBasedStringSupplier.h 
+  648  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp include/util/DocumentIndexFileBasedStringSupplier.h 
+  650  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp include/util/DocumentIndexFileBasedStringSupplier.h 
+  652  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp include/util/DocumentIndexFileBasedStringSupplier.h 
+  654  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp include/util/DocumentIndexFileBasedStringSupplier.h 
+  658  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp include/util/DocumentIndexFileBasedStringSupplier.h 
+  661  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp include/util/DocumentIndexFileBasedStringSupplier.h 
+  663  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp include/util/DocumentIndexFileBasedStringSupplier.h 
+  664  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp include/util/DocumentIndexFileBasedStringSupplier.h include/Document.h src/Document.cpp 
+  670  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp include/util/DocumentIndexFileBasedStringSupplier.h include/Document.h src/Document.cpp 
+  672  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp src/Document.cpp 
+  675  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp src/Document.cpp 
+  682  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp src/Document.cpp 
+  685  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp src/Document.cpp 
+  690  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp src/Document.cpp 
+  692  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp src/Document.cpp 
+  695  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp src/Document.cpp 
+  700  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp src/Document.cpp 
+  704  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/SimpleTokenizer.cpp test/util/SimpleTokenizerTest.cpp -o tokenizer
+  706  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/SimpleTokenizer.cpp test/util/SimpleTokenizerTest.cpp -o tokenizer
+  708  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/SimpleTokenizer.cpp test/util/SimpleTokenizerTest.cpp -o tokenizer
+  710  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/SimpleTokenizer.cpp test/util/SimpleTokenizerTest.cpp -o tokenizer
+  713  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/TermIDMapper.cpp test/util/TermIDMapperTest.cpp src/util/SimpleTokenizer.cpp -o build/termidmapper -lboost_serialization
+  715  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/TermIDMapper.cpp test/util/TermIDMapperTest.cpp src/util/SimpleTokenizer.cpp -o build/termidmapper -lboost_serialization
+  718  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp src/Document.cpp 
+  726  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp src/Document.cpp 
+  730  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp src/Document.cpp 
+  731  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp src/Document.cpp src/util/TermIDMapper.cpp 
+  732  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp src/Document.cpp -lboost_serialization
+  733  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp src/Document.cpp include/util/TermIDMapper.h 
+  735  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp src/Document.cpp include/util/TermIDMapper.h 
+  736  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp src/Document.cpp
+  738  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp src/util/TermIDMapper.cpp -lboost_serialization
+  739  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp src/util/TermIDMapper.cpp -lboost_serialization src/util/SimpleTokenizer.cpp 
+  740  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp src/util/TermIDMapper.cpp -lboost_serialization src/util/SimpleTokenizer.cpp src/Document.cpp 
+  743  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc src/util/DocumentIndexFileBasedStringSupplier.cpp test/util/DIFBasedStringSupplierTest.cpp src/util/TermIDMapper.cpp -lboost_serialization src/util/SimpleTokenizer.cpp src/Document.cpp 
+  751  clang++ src/TermIDMapping.cpp -c
+  752  clang++ src/TermIDMapping.cpp -c -I include
+  754  clang++ src/TermIDMapping.cpp -c -I include
+  755  clang++ src/TermIDMapping.cpp -c -I include
+  757  clang++ src/TermIDMapping.cpp -c -I include
+  760  clang++ src/TermIDMapping.cpp -c -I include
+  764  clang++ src/TermIDMapping.cpp -c -I include
+  766  clang++ src/TermIDMapping.cpp -c -I include
+  768  clang++ src/TermIDMapping.cpp -c -I include
+  770  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/TermIDMappingTest.cpp -lboost_serialization
+  772  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/TermIDMappingTest.cpp -lboost_serialization
+  774  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/TermIDMappingTest.cpp -lboost_serialization
+  776  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/TermIDMappingTest.cpp -lboost_serialization
+  777  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/TermIDMappingTest.cpp -lboost_serialization src/util/DocumentIndexFileBasedStringSupplier.cpp src/util/TermIDMapper.cpp 
+  778  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/TermIDMappingTest.cpp -lboost_serialization src/util/DocumentIndexFileBasedStringSupplier.cpp src/util/TermIDMapper.cpp 
+  779  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/TermIDMappingTest.cpp -lboost_serialization src/util/DocumentIndexFileBasedStringSupplier.cpp src/util/TermIDMapper.cpp src/util/SimpleTokenizer.cpp 
+  780  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/TermIDMappingTest.cpp -lboost_serialization src/util/DocumentIndexFileBasedStringSupplier.cpp src/util/TermIDMapper.cpp src/util/SimpleTokenizer.cpp src/TermIDMapping.cpp 
+  781  clang++ -std=c++17 -lgtest -lpthread -I include test/gtest_main.cc test/TermIDMappingTest.cpp -lboost_serialization src/util/DocumentIndexFileBasedStringSupplier.cpp src/util/TermIDMapper.cpp src/util/SimpleTokenizer.cpp src/TermIDMapping.cpp src/Document.cpp 
+  809  history | grep clang++ > hist.txt 
+  907  clang++ -std=c++17 src/TermRecord.cpp 
+  908  clang++ -std=c++17 -I include -c src/TermRecord.cpp 
+  910  clang++ -std=c++17 -I include -c src/TermRecord.cpp 
+  913  clang++ -std=c++17 -I include -c src/TermRecord.cpp 
+  914  clang++ -std=c++17 -I include -c src/TermRecord.cpp 
+  916  clang++ -std=c++17 -I include -c src/TermRecord.cpp 
+  917  clang++ -std=c++17 -I include -c src/TermRecord.cpp 
+  920  clang++ -std=c++17 -I include -c src/PostingsList.cpp 
+  923  clang++ -std=c++17 -I include -c src/PostingsList.cpp 
+  928  clang++ -std=c++17 -I include -c src/PostingsList.cpp 
+  930  clang++ -std=c++17 -I include -c src/PostingsList.cpp 
+  931  clang++ -std=c++17 -I include -c src/PostingsList.cpp 
+  932  clang++ -std=c++17 -I include -c src/PostingsList.cpp 
+  935  clang++ -std=c++17 -I include -c src/PostingsList.cpp 
+  937  clang++ -std=c++17 -I include -c src/PostingsList.cpp 
+  939  clang++ -std=c++17 -I include -c src/InvertedIndex.cpp 
+  941  clang++ -std=c++17 -I include -c src/InvertedIndex.cpp 
+  964  history | grep clang++ >> hist.txt

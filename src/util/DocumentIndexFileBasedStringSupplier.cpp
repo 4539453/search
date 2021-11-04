@@ -32,7 +32,7 @@ std::string DocumentIndexFileBasedStringSupplier::get() {
   std::function<void(Document)> loadTextOfDocument =
       [&TextFilesRoot = TextFilesRoot,
        &TextToSupply = TextToSupply](Document Document) {
-        std::string FilePath = TextFilesRoot + Document.getFileName();
+        std::string FilePath = TextFilesRoot + Document.getFilePath();
         std::ifstream Ifs(FilePath, std::ios::in | std::ios::binary);
         Ifs.seekg(0, std::ios::end);
         TextToSupply.resize(Ifs.tellg());

@@ -1,8 +1,8 @@
 #ifndef TERM_ID_MAPPING_H
 #define TERM_ID_MAPPING_H
 
-#include <unordered_map>
 #include <string>
+#include <unordered_map>
 
 class TermIDMapping {
 private:

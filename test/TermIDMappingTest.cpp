@@ -1,8 +1,8 @@
-#include "gtest/gtest.h"
-#include <string>
+#include "TermIDMapping.h"
 #include "util/DocumentIndexFileBasedStringSupplier.h"
 #include "util/TermIDMapper.h"
-#include "TermIDMapping.h"
+#include "gtest/gtest.h"
+#include <string>
 
 TEST(TermIDMappingTest, Test1) {
   DocumentIndexFileBasedStringSupplier SSupplier("test/resources/txts/",
@@ -16,6 +16,3 @@ TEST(TermIDMappingTest, Test1) {
   EXPECT_EQ(1, TermIDMapping.getTermIdOf("doc3"));
   EXPECT_EQ(7, TermIDMapping.getTermIdOf("doc1"));
 }
-
-
-
