@@ -13,16 +13,15 @@ const std::set<TermRecord, TermRecordCompare> &PostingsList::termRecords() const
 }
 
 void PostingsList::add(const TermRecord &TermRecord) {
-  for (auto &TermR : TermRecords) {
-    if (TermR.docID() == TermRecord.docID()) {
-      std::vector<unsigned int> TermPositionsOfBoth(TermR.termPositions());
-      TermPositionsOfBoth.insert(TermPositionsOfBoth.end(),
-                                 TermRecord.termPositions().begin(),
-                                 TermRecord.termPositions().end());
-      TermRecords.erase(TermR);
-      TermRecords.emplace(TermRecord.docID(), TermPositionsOfBoth);
-      return;
-    }
+  auto TermRecordIter = TermRecords.find(TermRecord);
+  if (TermRecordIter == TermRecords.end()) {
+    TermRecords.insert(TermRecord);
+    return; 
   }
-  TermRecords.insert(TermRecord);
+  std::vector<unsigned int> TermPositionsOfBoth(TermRecordIter->termPositions());
+  TermPositionsOfBoth.insert(TermPositionsOfBoth.end(),
+      TermRecord.termPositions().begin(),
+      TermRecord.termPositions().end());
+  TermRecords.erase(TermRecordIter);
+  TermRecords.emplace(TermRecord.docID(), TermPositionsOfBoth);
 }

@@ -42,11 +42,7 @@ void InvertedIndex::build(DocumentSupplier &DocumentSupplier,
 }
 
 void InvertedIndex::addPostingsList(PostingsList &OtherPostingsList) {
-  auto PostingsListIter = std::find_if(
-      PostingsListSet.begin(), PostingsListSet.end(),
-      [&](const PostingsList &ThisPostingsList) -> bool {
-        return ThisPostingsList.termID() == OtherPostingsList.termID();
-      });
+  auto PostingsListIter = PostingsListSet.find(OtherPostingsList); 
   if (PostingsListIter != PostingsListSet.end()) {
     PostingsList CombinedPostingsList(PostingsListIter->termID(), PostingsListIter->termRecords());
     PostingsListSet.erase(*PostingsListIter);
@@ -62,11 +58,8 @@ void InvertedIndex::addPostingsList(PostingsList &OtherPostingsList) {
 
 const std::set<TermRecord, TermRecordCompare> &
 InvertedIndex::getRecordsOfTermWithID(unsigned int TermID) const {
-  std::set<PostingsList>::iterator PostingsListIter =
-      std::find_if(PostingsListSet.begin(), PostingsListSet.end(),
-                   [&](const PostingsList &ThisPostingsList) -> bool {
-                     return ThisPostingsList.termID() == TermID;
-                   });
+  PostingsList DummyPostingsList(TermID);
+  std::set<PostingsList>::iterator PostingsListIter = PostingsListSet.find(DummyPostingsList);
   if (PostingsListIter != PostingsListSet.end()) {
     return PostingsListIter->termRecords();
   }
