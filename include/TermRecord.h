@@ -1,8 +1,8 @@
 #ifndef TERM_RECORD_H
 #define TERM_RECORD_H
 
-#include <vector>
 #include <set>
+#include <vector>
 
 class TermRecord {
 private:
@@ -14,7 +14,7 @@ public:
   TermRecord(unsigned int DocID, std::vector<unsigned int> &TermPositions);
   unsigned int docID() const;
   const std::vector<unsigned int> &termPositions() const;
-  virtual bool operator<(const TermRecord &Tr);
+  virtual bool operator<(const TermRecord &Tr) const;
   void addTermPosition(unsigned int Position);
   void addTermPositions(std::vector<unsigned int> &Positions);
   void addTermPositionsSet(std::set<unsigned int> &Positions);

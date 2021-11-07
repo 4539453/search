@@ -13,7 +13,8 @@ private:
 public:
   PostingsList();
   PostingsList(unsigned int TermID);
-  PostingsList(unsigned int TermID, std::set<TermRecord, TermRecordCompare> TermRecords);
+  PostingsList(unsigned int TermID,
+               std::set<TermRecord, TermRecordCompare> TermRecords);
   unsigned int termID() const;
   const std::set<TermRecord, TermRecordCompare> &termRecords() const;
   void add(const TermRecord &TermRecord);

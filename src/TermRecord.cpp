@@ -12,7 +12,9 @@ const std::vector<unsigned int> &TermRecord::termPositions() const {
   return TermPositions;
 }
 
-bool TermRecord::operator<(const TermRecord &Tr) { return DocID < Tr.docID(); }
+bool TermRecord::operator<(const TermRecord &Tr) const {
+  return DocID < Tr.docID();
+}
 
 void TermRecord::addTermPosition(unsigned int Position) {
   TermPositions.insert(TermPositions.begin(), Position);

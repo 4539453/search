@@ -1,10 +1,10 @@
 #include "InvertedIndex.h"
 
 #include <algorithm>
-#include <functional>
-#include <string>
-#include <iostream>
 #include <fstream>
+#include <functional>
+#include <iostream>
+#include <string>
 
 InvertedIndex::InvertedIndex() {}
 
@@ -13,10 +13,11 @@ InvertedIndex::~InvertedIndex() {}
 void InvertedIndex::build(DocumentSupplier &DocumentSupplier,
                           Tokenizer &Tokenizer, TermIDMapping &TermIDMapping) {
   std::cout << "Building Inverted Index...\n";
-  
+
   std::function<std::string(Document)> getTextOfDocument =
       [](Document Document) -> std::string {
-//        std::cout << "Getting text of document \""<<Document.getTitle() << "\"\n";
+    //        std::cout << "Getting text of document \""<<Document.getTitle() <<
+    //        "\"\n";
     std::string DocText = "";
     std::string FilePath = Document.getFilePath();
     std::ifstream Ifs(FilePath, std::ios::in | std::ios::binary);
@@ -41,27 +42,30 @@ void InvertedIndex::build(DocumentSupplier &DocumentSupplier,
 }
 
 void InvertedIndex::addPostingsList(PostingsList &OtherPostingsList) {
- // std::cout << "Adding PostingsList of term with id " << OtherPostingsList.termID() << "\n";
-  auto PostingsListIter = PostingsListSet.find(OtherPostingsList); 
+  // std::cout << "Adding PostingsList of term with id " <<
+  // OtherPostingsList.termID() << "\n";
+  auto PostingsListIter = PostingsListSet.find(OtherPostingsList);
   if (PostingsListIter != PostingsListSet.end()) {
-  //  std::cout << "Merging with existing PostingsList...\n";
-    PostingsList CombinedPostingsList(PostingsListIter->termID(), PostingsListIter->termRecords());
+    //  std::cout << "Merging with existing PostingsList...\n";
+    PostingsList CombinedPostingsList(PostingsListIter->termID(),
+                                      PostingsListIter->termRecords());
     PostingsListSet.erase(*PostingsListIter);
     for (auto &TermRecordOut : OtherPostingsList.termRecords()) {
       CombinedPostingsList.add(TermRecordOut);
     }
-    
+
     PostingsListSet.insert(CombinedPostingsList);
     return;
   }
- // std::cout << "Inserting into PostingsListSet...\n";
+  // std::cout << "Inserting into PostingsListSet...\n";
   PostingsListSet.insert(OtherPostingsList);
 }
 
 const std::set<TermRecord, TermRecordCompare> &
 InvertedIndex::getRecordsOfTermWithID(unsigned int TermID) const {
   PostingsList DummyPostingsList(TermID);
-  std::set<PostingsList>::iterator PostingsListIter = PostingsListSet.find(DummyPostingsList);
+  std::set<PostingsList>::iterator PostingsListIter =
+      PostingsListSet.find(DummyPostingsList);
   if (PostingsListIter != PostingsListSet.end()) {
     return PostingsListIter->termRecords();
   }
