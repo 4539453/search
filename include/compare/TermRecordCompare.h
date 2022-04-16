@@ -5,6 +5,7 @@
 
 class TermRecordCompare {
 public:
-  bool operator() (const TermRecord &LTermRecord, const TermRecord &RTermRecord) const;
+  bool operator()(const TermRecord &LTermRecord,
+                  const TermRecord &RTermRecord) const;
 };
 #endif

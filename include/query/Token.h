@@ -1,17 +1,18 @@
 #ifndef TOKEN_H
 #define TOKEN_H
 
-#include <string>
 #include "query/TokenType.h"
+#include <string>
 
 class Token {
-  private:
-    TokenType Type;
-    std::string Value;
-  public:
-    Token(TokenType Type, std::string Value);
-    Token(char C);
-    TokenType type();
-    std::string value();
+private:
+  TokenType Type;
+  std::string Value;
+
+public:
+  Token(TokenType Type, std::string Value);
+  Token(char C);
+  TokenType type();
+  std::string value();
 };
 #endif

@@ -1,8 +1,16 @@
 clang-format -style=file -i src/*.cpp
 clang-format -style=file -i src/util/*.cpp
+clang-format -style=file -i src/compare/*.cpp
+clang-format -style=file -i src/query/*.cpp
+clang-format -style=file -i src/query/ast/*.cpp
+clang-format -style=file -i src/query/except/*.cpp
 
 clang-format -style=file -i test/*.cpp
 clang-format -style=file -i test/util/*.cpp
 
 clang-format -style=file -i include/*.h
 clang-format -style=file -i include/util/*.h
+clang-format -style=file -i include/compare/*.h
+clang-format -style=file -i include/query/*.h
+clang-format -style=file -i include/query/ast/*.h
+clang-format -style=file -i include/query/except/*.h

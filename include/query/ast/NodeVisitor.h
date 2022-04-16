@@ -7,8 +7,8 @@ class BinaryOpASTNode;
 class WordASTNode;
 
 class NodeVisitor {
-  public:
-    virtual void visit(BinaryOpASTNode *Node) = 0;
-    virtual void visit(WordASTNode *Node) = 0;
+public:
+  virtual void visit(BinaryOpASTNode *Node) = 0;
+  virtual void visit(WordASTNode *Node) = 0;
 };
 #endif

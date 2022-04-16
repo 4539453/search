@@ -5,6 +5,7 @@
 
 class PostingsListCompare {
 public:
-  bool operator() (const PostingsList &LPostingsList, const PostingsList &RPostingsList) const;
+  bool operator()(const PostingsList &LPostingsList,
+                  const PostingsList &RPostingsList) const;
 };
 #endif

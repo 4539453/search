@@ -1,9 +1,9 @@
 enum class TokenType {
-WORD,
-AND='&',
-OR='|',
-LPAREN='(',
-RPAREN=')',
-NOT='-',
-EOL
+  WORD,
+  AND = '&',
+  OR = '|',
+  LPAREN = '(',
+  RPAREN = ')',
+  NOT = '-',
+  EOL
 };
