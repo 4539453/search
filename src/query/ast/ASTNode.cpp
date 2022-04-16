@@ -7,7 +7,7 @@ void ASTNode::isEvaluated() { this->IsEvaluated = true; }
 
 bool ASTNode::evaluated() { return this->IsEvaluated; }
 
-std::set<TermRecord, TermRecordCompare> ASTNode::result() { return Result; }
+std::set<TermRecord, TermRecordCompare> &ASTNode::result() { return Result; }
 
 std::set<TermRecord, TermRecordCompare> ASTNode::evaluatedResult() {
   if (this->IsEvaluated) {
