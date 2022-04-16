@@ -8,11 +8,9 @@
 class BinaryOpASTNode;
 class WordASTNode;
 
-class ResultComputingNodeVisitor {
+class ResultComputingNodeVisitor : NodeVisitor {
 public:
-  virtual std::set<TermRecord, TermRecordCompare>
-  compute(BinaryOpASTNode *Node) = 0;
-  virtual std::set<TermRecord, TermRecordCompare>
-  compute(WordASTNode *Node) = 0;
+  void visit(BinaryOpASTNode *Node) override;
+  void visit(WordASTNode *Node) override;
 };
 #endif

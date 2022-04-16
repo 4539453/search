@@ -13,3 +13,8 @@ std::set<TermRecord, TermRecordCompare>
 BinaryOpASTNode::acceptComputingVisitor(ResultComputingNodeVisitor &Visitor) {
   return Visitor.compute(this);
 }
+
+BinaryOpASTNode::~BinaryOpASTNode() {
+  delete Left;
+  delete Right;
+}

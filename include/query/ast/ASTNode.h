@@ -18,9 +18,10 @@ public:
   virtual void accept(NodeVisitor &Visitor) = 0;
   bool evaluated();
   void isEvaluated();
-  std::set<TermRecord, TermRecordCompare> &result();
-  std::set<TermRecord, TermRecordCompare> &evaluatedResult();
+  std::set<TermRecord, TermRecordCompare> result();
+  std::set<TermRecord, TermRecordCompare> evaluatedResult();
   virtual std::set<TermRecord, TermRecordCompare>
   acceptComputingVisitor(ResultComputingNodeVisitor &Visitor) = 0;
+  virtual ~ASTNode() = 0;
 };
 #endif

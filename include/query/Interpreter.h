@@ -7,14 +7,15 @@
 #include "query/ast/WordASTNode.h"
 #include <set>
 
-class Interpreter : NodeVisitor {
+class Interpreter {
+private:
+  Parser Parser;
+  ResultComputingNodeVisitor ResultComputingNodeVisitor;
+  // NodeVisitor PrintVisitor;
 public:
-  void visit(BinaryOpASTNode *Node) override;
-  void visit(WordASTNode *Node) override;
-  virtual std::set<TermRecord, TermRecordCompare>
-  compute(BinaryOpASTNode *Node) = 0;
-  virtual std::set<TermRecord, TermRecordCompare>
-  compute(WordASTNode *Node) = 0;
+  Interpreter(Parser Parser);
+  Interpreter(Parser, ResultComputingNodeVisitor);
+  set<TermRecord, TermRecordCompare> computeSearchResult();
 };
 
 #endif

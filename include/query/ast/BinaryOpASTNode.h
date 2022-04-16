@@ -20,6 +20,7 @@ public:
   void accept(NodeVisitor &Visitor) override;
   std::set<TermRecord, TermRecordCompare>
   acceptComputingVisitor(ResultComputingNodeVisitor &Visitor) override;
+  ~BinaryOpASTNode();
 };
 
 #endif
