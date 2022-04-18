@@ -1,5 +1,9 @@
 #include "query/ast/ResultComputingNodeVisitor.h"
 
+ResultComputingNodeVisitor::ResultComputingNodeVisitor(InvertedIndex &IIndex,
+                                                       TermIDMapping &Map)
+    : Index{IIndex}, TermIDMap{Map} {}
+
 ResultComputingNodeVisitor::visit(BinaryOpASTNode *Node) {
   Node->result().clear();
   Node->left()->accept(*this);
@@ -30,6 +34,8 @@ ResultComputingNodeVisitor::visit(BinaryOpASTNode *Node) {
 
 ResultComputingNodeVisitor::visit(WordASTNode *Node) {
   Node->result().clear();
-  // Node->result()({}); //TODO Inverted-Index query
+  auto TermRecords = this->Index.getRecordsOfTermWithID(
+      this->TermIDMap.getTermIdOf(Node->word()));
+  Node->result().insert(TermRecords.begin(), TermRecords.end());
   Node->isEvaluated();
 }
