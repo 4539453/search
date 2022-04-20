@@ -9,5 +9,7 @@ Interpreter::Interpreter(Parser Parser,
 set<TermRecord, TermRecordCompare> Interpreter::computeSearchResult() {
   ASTNode *Node = this->Parser.parse();
   Node->accept(this->ResultComputingNodeVisitor);
-  return Node->evaluatedResult(); // TODO delete Node
+  auto ResultSet(Node->evaluatedResult()); // uses move constructor
+  delete Node;
+  return ResultSet;
 }
