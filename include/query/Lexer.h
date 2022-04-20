@@ -22,7 +22,7 @@ private:
   bool isCurrentSpecial();
 
 public:
-  Lexer(std::string Text);
+  explicit Lexer(std::string&& Text);
   Token getNextToken();
 };
 

@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <functional>
 
-std::vector<std::string> *SimpleTokenizer::tokenize(std::string Text) {
+std::vector<std::string> *SimpleTokenizer::tokenize(const std::string &Text) {
   std::vector<std::string> *Words = new std::vector<std::string>();
   std::function<void(std::string)> addToWordsIfNotEmpty =
       [Words](std::string Word) {
@@ -28,7 +28,7 @@ std::vector<std::string> *SimpleTokenizer::tokenize(std::string Text) {
 }
 
 std::map<std::string, std::set<unsigned int>>
-SimpleTokenizer::tokenize2(std::string Text) {
+SimpleTokenizer::tokenize2(const std::string &Text) {
   std::map<std::string, std::set<unsigned int>> MapOfTermsAndPositions;
   std::function<void(std::string, unsigned int)> addToMapIfWordNotEmpty =
       [&MapOfTermsAndPositions =

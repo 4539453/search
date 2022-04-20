@@ -8,9 +8,9 @@
 
 class SimpleTokenizer : public Tokenizer {
 public:
-  std::vector<std::string> *tokenize(std::string Text) override;
+  std::vector<std::string> *tokenize(const std::string &Text) override;
   std::map<std::string, std::set<unsigned int>>
-  tokenize2(std::string Text) override;
+  tokenize2(const std::string &Text) override;
 };
 
 #endif
