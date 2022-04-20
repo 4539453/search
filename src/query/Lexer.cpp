@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <array>
 
-Lexer::Lexer(std::string&& Text) : Text(std::forward<std::string>(Text)), Locale("C") {
+Lexer::Lexer(const std::string &Text) : Text{Text}, Locale("C") {
   Pos = 0;
   CurrentChar = Text[Pos];
 }
@@ -53,7 +53,7 @@ void Lexer::advance() {
 }
 
 bool Lexer::isSpecialChar(char C) {
-  std::array<char, 5> SpecialChars = {'(', ')', '&', '|', '-'};
+  std::array<char, 5> SpecialChars = {{'(', ')', '&', '|', '-'}};
   return std::any_of(SpecialChars.begin(), SpecialChars.end(),
                      [C](char ArrC) { return C == ArrC; });
 }
