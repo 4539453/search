@@ -6,16 +6,16 @@
 #include "query/ast/ResultComputingNodeVisitor.h"
 #include "query/ast/WordASTNode.h"
 #include <set>
+#include "query/Parser.h"
 
 class Interpreter {
 private:
-  Parser Parser;
-  ResultComputingNodeVisitor ResultComputingNodeVisitor;
+  Parser QueryParser;
+  ResultComputingNodeVisitor RCNodeVisitor;
   // NodeVisitor PrintVisitor;
 public:
-  Interpreter(Parser Parser);
   Interpreter(Parser, ResultComputingNodeVisitor);
-  set<TermRecord, TermRecordCompare> computeSearchResult();
+  std::set<TermRecord, TermRecordCompare> computeSearchResult();
 };
 
 #endif

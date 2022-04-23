@@ -9,7 +9,7 @@
 class BinaryOpASTNode;
 class WordASTNode;
 
-class ResultComputingNodeVisitor : NodeVisitor {
+class ResultComputingNodeVisitor : public NodeVisitor {
 private:
   InvertedIndex &Index;
   TermIDMapping &TermIDMap;

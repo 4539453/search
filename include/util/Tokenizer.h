@@ -8,9 +8,9 @@
 
 class Tokenizer {
 public:
-  virtual std::vector<std::string> *tokenize(const std::string& Text) = 0;
+  virtual std::vector<std::string> *tokenize(const std::string &Text) = 0;
   virtual std::map<std::string, std::set<unsigned int>>
-  tokenize2(const std::string& Text) = 0;
+  tokenize2(const std::string &Text) = 0;
 };
 
 #endif

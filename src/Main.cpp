@@ -5,7 +5,7 @@
 #include "query/Lexer.h"
 #include "query/Parser.h"
 #include "query/ast/ResultComputingNodeVisitor.h"
-#include "util/IndexFileBasedDocSupplier.h"
+#include "IndexFileBasedDocSupplier.h"
 #include "util/SimpleTokenizer.h"
 
 int main() {
@@ -16,9 +16,10 @@ int main() {
   TermIDMapping TermIDMap;
   TermIDMap.loadMappingFromFile(MappingFilePath);
 
+  IndexFileBasedDocSupplier IFBDocSupplier(DocFilesRoot, IndexFileName);
+  SimpleTokenizer Tokenizer;
   InvertedIndex IIndex;
-  IIndex.build(IndexFileBasedDocSupplier(DocFilesRoot, IndexFileName),
-               SimpleTokenizer(), TermIDMap);
+  IIndex.build(IFBDocSupplier, Tokenizer, TermIDMap);
   ResultComputingNodeVisitor RCNVisitor(IIndex, TermIDMap);
   std::string Query;
   std::cout << "Enter query string (ctrl-d to exit) : ";
