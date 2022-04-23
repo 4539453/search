@@ -4,6 +4,6 @@ enum class TokenType {
   OR = '|',
   LPAREN = '(',
   RPAREN = ')',
-  NOT = '-',
+  NOT = '~',
   EOL
 };

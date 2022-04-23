@@ -53,7 +53,7 @@ void Lexer::advance() {
 }
 
 bool Lexer::isSpecialChar(char C) {
-  std::array<char, 5> SpecialChars = {{'(', ')', '&', '|', '-'}};
+  std::array<char, 5> SpecialChars = {{'(', ')', '&', '|', '~'}};
   return std::any_of(SpecialChars.begin(), SpecialChars.end(),
                      [C](char ArrC) { return C == ArrC; });
 }
