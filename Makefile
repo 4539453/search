@@ -6,20 +6,36 @@ INCLUDEROOT=../include
 CC=clang++ -std=c++17 -I $(INCLUDEROOT)
 COMPILE=$(CC) $(CFLAGS) -o $@
 
-search : main.o 
+install : search
+#	mv search ../
+
+search : main.o astnode.o wordnode.o binaryopnode.o rcnvisitor.o \
+	interpreter.o parser.o lexer.o queryexcept.o token.o printvisitor.o \
+	simpletokenizer.o postingslist.o termrecord.o document.o \
+	ifbdocsupplier.o termidmapping.o trcompare.o plcompare.o \
+	invertedindex.o 
+	$(CC) $(LIBFLAGS) -o $@ $^ 
 
 main.o :
 	$(COMPILE) $(SRCROOT)/Main.cpp
 
-tests : 
-
-invertedindextest : simpletokenizer.o postingslist.o termrecord.o document.o \
-	ifbdocsupplier.o termidmapping.o trcompare.o plcompare.o \
-	invertedindex.o invertedindextest.o gtest.o
-	$(CC) $(GTESTFLAGS) $(LIBFLAGS) -o $@ $^ 
-
 rcnvisitor.o:
-	$(COMPILE) $(SRCROOT)/query/ast/ResultComputingNodeVisitor.cpp
+	$(COMPILE) $(SRCROOT)/query/ast/ResultComputingNodeVisitor.cpp 
+
+printvisitor.o:
+	$(COMPILE) $(SRCROOT)/query/ast/NodePrintVisitor.cpp 
+
+token.o :
+	$(COMPILE) $(SRCROOT)/query/Token.cpp
+
+astnode.o:
+	$(COMPILE) $(SRCROOT)/query/ast/ASTNode.cpp 
+
+wordnode.o:
+	$(COMPILE) $(SRCROOT)/query/ast/WordASTNode.cpp 
+
+binaryopnode.o:
+	$(COMPILE) $(SRCROOT)/query/ast/BinaryOpASTNode.cpp
 
 interpreter.o : 
 	$(COMPILE) $(SRCROOT)/query/Interpreter.cpp
@@ -27,17 +43,26 @@ interpreter.o :
 parser.o :
 	$(COMPILE) $(SRCROOT)/query/Parser.cpp
 
+parsertest.o :
+	$(COMPILE) ../test/ParserTest.cpp
+
 lexer.o :
 	$(COMPILE) $(SRCROOT)/query/Lexer.cpp
+
+lexertest.o :
+	$(COMPILE) ../test/LexerTest.cpp
+
+queryexcept.o :
+	$(COMPILE) $(SRCROOT)/query/except/QueryException.cpp
 
 gtest.o : 
 	$(COMPILE) ../test/gtest_main.cc
 
-invertedindextest.o :
-	$(COMPILE) ../test/InvertedIndexTest.cpp
-
 invertedindex.o :
 	$(COMPILE) $(SRCROOT)/InvertedIndex.cpp
+
+invertedindextest.o :
+	$(COMPILE) ../test/InvertedIndexTest.cpp
 
 trcompare.o :
 	$(COMPILE) $(SRCROOT)/compare/TermRecordCompare.cpp
@@ -65,6 +90,19 @@ ifbdocsupplier.o :
 
 document.o :
 	$(COMPILE) $(SRCROOT)/Document.cpp
+
+invertedindextest : simpletokenizer.o postingslist.o termrecord.o document.o \
+	ifbdocsupplier.o termidmapping.o trcompare.o plcompare.o \
+	invertedindex.o invertedindextest.o gtest.o
+	$(CC) $(GTESTFLAGS) $(LIBFLAGS) -o $@ $^ 
+
+lexertest : token.o queryexcept.o lexer.o lexertest.o gtest.o
+	$(CC) $(GTESTFLAGS) $(LIBFLAGS) -o $@ $^
+
+parsertest : token.o queryexcept.o lexer.o  \
+	gtest.o parser.o parsertest.o printvisitor.o astnode.o \
+	wordnode.o binaryopnode.o termrecord.o trcompare.o
+	$(CC) $(GTESTFLAGS) $(LIBFLAGS) -o $@ $^
 
 clean :
 	rm *o search
