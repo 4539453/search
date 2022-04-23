@@ -29,7 +29,7 @@ Token Lexer::getNextToken() {
     return Token(C);
   }
 
-  if (std::isalpha(CurrentChar, Locale)) {
+  if (std::isalpha(CurrentChar, Locale) || std::isdigit(CurrentChar, Locale)) {
     std::string WordTok = word();
     TokensOnlyText.append(WordTok);
     return Token(TokenType::WORD, WordTok);
@@ -64,7 +64,8 @@ bool Lexer::isPrevSpecial() { return isSpecialChar(TokensOnlyText.back()); }
 
 std::string Lexer::word() {
   std::string Result;
-  while (CurrentChar != '\0' && std::isalpha(CurrentChar, Locale)) {
+  while (CurrentChar != '\0' && (std::isalpha(CurrentChar, Locale) ||
+                                 std::isdigit(CurrentChar, Locale))) {
     Result.append(1, CurrentChar);
     advance();
   }
