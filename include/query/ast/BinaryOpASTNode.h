@@ -4,7 +4,6 @@
 #include "query/Token.h"
 #include "query/ast/ASTNode.h"
 #include "query/ast/NodeVisitor.h"
-#include "query/ast/ResultComputingNodeVisitor.h"
 
 class BinaryOpASTNode : public ASTNode {
 private:
@@ -18,8 +17,6 @@ public:
   Token op();
   ASTNode *right();
   void accept(NodeVisitor &Visitor) override;
-  std::set<TermRecord, TermRecordCompare>
-  acceptComputingVisitor(ResultComputingNodeVisitor &Visitor) override;
   ~BinaryOpASTNode();
 };
 

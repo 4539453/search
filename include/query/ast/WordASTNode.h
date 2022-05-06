@@ -4,7 +4,6 @@
 #include "query/Token.h"
 #include "query/ast/ASTNode.h"
 #include "query/ast/NodeVisitor.h"
-#include "query/ast/ResultComputingNodeVisitor.h"
 #include <string>
 
 class WordASTNode : public ASTNode {
@@ -15,8 +14,6 @@ public:
   WordASTNode(Token WordToken);
   std::string word();
   void accept(NodeVisitor &Visitor) override;
-  std::set<TermRecord, TermRecordCompare>
-  acceptComputingVisitor(ResultComputingNodeVisitor &Visitor) override;
   ~WordASTNode();
 };
 #endif

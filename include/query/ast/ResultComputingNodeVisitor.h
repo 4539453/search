@@ -4,10 +4,10 @@
 #include "InvertedIndex.h"
 #include "compare/TermRecordCompare.h"
 #include "query/ast/ASTNode.h"
+#include "query/ast/BinaryOpASTNode.h"
+#include "query/ast/NodeVisitor.h"
+#include "query/ast/WordASTNode.h"
 #include <set>
-
-class BinaryOpASTNode;
-class WordASTNode;
 
 class ResultComputingNodeVisitor : public NodeVisitor {
 private:
@@ -15,7 +15,7 @@ private:
   TermIDMapping &TermIDMap;
 
 public:
-  ResultComputingNodeVisitor(InvertedIndex, TermIDMapping);
+  ResultComputingNodeVisitor(InvertedIndex &, TermIDMapping &);
   void visit(BinaryOpASTNode *Node) override;
   void visit(WordASTNode *Node) override;
 };

@@ -16,8 +16,6 @@ void InvertedIndex::build(DocumentSupplier &DocumentSupplier,
 
   std::function<std::string(Document)> getTextOfDocument =
       [](Document Document) -> std::string {
-    //        std::cout << "Getting text of document \""<<Document.getTitle() <<
-    //        "\"\n";
     std::string DocText = "";
     std::string FilePath = Document.getFilePath();
     std::ifstream Ifs(FilePath, std::ios::in | std::ios::binary);
@@ -42,11 +40,8 @@ void InvertedIndex::build(DocumentSupplier &DocumentSupplier,
 }
 
 void InvertedIndex::addPostingsList(PostingsList &OtherPostingsList) {
-  // std::cout << "Adding PostingsList of term with id " <<
-  // OtherPostingsList.termID() << "\n";
   auto PostingsListIter = PostingsListSet.find(OtherPostingsList);
   if (PostingsListIter != PostingsListSet.end()) {
-    //  std::cout << "Merging with existing PostingsList...\n";
     PostingsList CombinedPostingsList(PostingsListIter->termID(),
                                       PostingsListIter->termRecords());
     PostingsListSet.erase(*PostingsListIter);
@@ -57,11 +52,10 @@ void InvertedIndex::addPostingsList(PostingsList &OtherPostingsList) {
     PostingsListSet.insert(CombinedPostingsList);
     return;
   }
-  // std::cout << "Inserting into PostingsListSet...\n";
   PostingsListSet.insert(OtherPostingsList);
 }
 
-const std::set<TermRecord, TermRecordCompare> &
+const std::set<TermRecord, TermRecordCompare>
 InvertedIndex::getRecordsOfTermWithID(unsigned int TermID) const {
   PostingsList DummyPostingsList(TermID);
   std::set<PostingsList>::iterator PostingsListIter =

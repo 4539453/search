@@ -1,11 +1,14 @@
 #include "query/ast/ResultComputingNodeVisitor.h"
+#include "query/Token.h"
+#include "query/except/QueryException.h"
 #include <algorithm>
+#include <iostream>
 
 ResultComputingNodeVisitor::ResultComputingNodeVisitor(InvertedIndex &IIndex,
                                                        TermIDMapping &Map)
     : Index{IIndex}, TermIDMap{Map} {}
 
-ResultComputingNodeVisitor::visit(BinaryOpASTNode *Node) {
+void ResultComputingNodeVisitor::visit(BinaryOpASTNode *Node) {
   Node->result().clear();
   Node->left()->accept(*this);
   Node->right()->accept(*this);
@@ -33,12 +36,18 @@ ResultComputingNodeVisitor::visit(BinaryOpASTNode *Node) {
   Node->isEvaluated();
 }
 
-ResultComputingNodeVisitor::visit(WordASTNode *Node) {
+void ResultComputingNodeVisitor::visit(WordASTNode *Node) {
   Node->result().clear();
   std::string Word = Node->word();
   std::transform(Word.begin(), Word.end(), Word.begin(), ::tolower);
-  auto TermRecords =
-      this->Index.getRecordsOfTermWithID(this->TermIDMap.getTermIdOf(Word));
+  unsigned int TermID = 0;
+  try {
+    TermID = this->TermIDMap.getTermIdOf(Word);
+  } catch (std::out_of_range &Except) {
+    std::cout << "New Word\n";
+  }
+
+  auto TermRecords = this->Index.getRecordsOfTermWithID(TermID);
   Node->result().insert(TermRecords.begin(), TermRecords.end());
   Node->isEvaluated();
 }

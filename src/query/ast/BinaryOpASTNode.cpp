@@ -9,11 +9,6 @@ Token BinaryOpASTNode::op() { return Op; }
 
 void BinaryOpASTNode::accept(NodeVisitor &Visitor) { Visitor.visit(this); }
 
-std::set<TermRecord, TermRecordCompare>
-BinaryOpASTNode::acceptComputingVisitor(ResultComputingNodeVisitor &Visitor) {
-  return Visitor.compute(this);
-}
-
 BinaryOpASTNode::~BinaryOpASTNode() {
   delete Left;
   delete Right;

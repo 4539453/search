@@ -17,7 +17,7 @@ public:
   void build(DocumentSupplier &DocumentSupplier, Tokenizer &Tokenizer,
              TermIDMapping &TermIDMapping);
   void addPostingsList(PostingsList &PostingsList);
-  const std::set<TermRecord, TermRecordCompare> &
+  const std::set<TermRecord, TermRecordCompare>
   getRecordsOfTermWithID(unsigned int TermID) const;
   ~InvertedIndex();
 };
