@@ -15,3 +15,5 @@ std::set<TermRecord, TermRecordCompare> ASTNode::evaluatedResult() {
   }
   throw QueryException("Tried to access result before evaluating");
 }
+
+ASTNode::~ASTNode() {}
