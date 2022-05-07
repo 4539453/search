@@ -8,7 +8,7 @@ Interpreter::Interpreter(Parser Parser,
 
 std::set<TermRecord, TermRecordCompare> Interpreter::computeSearchResult() {
   ASTNode *Node = this->QueryParser.parse();
-  std::cout << "Query in Scheme syntax: ";
+  std::cout << "Query as a Scheme expression: ";
   Node->accept(this->PrintVisitor);
   std::cout << '\n';
   Node->accept(this->RCNodeVisitor);

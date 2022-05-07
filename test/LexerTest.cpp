@@ -29,3 +29,13 @@ TEST(LexerTest, Test3) {
   EXPECT_EQ("~", Lex.getNextToken().value());
   EXPECT_EQ("abcdef", Lex.getNextToken().value());
 }
+
+TEST(LexerTest, Test4) {
+  std::string Query = "abc def fgh";
+  Lexer Lex(Query);
+  EXPECT_EQ("abc", Lex.getNextToken().value());
+  EXPECT_EQ("&", Lex.getNextToken().value());
+  EXPECT_EQ("def", Lex.getNextToken().value());
+  EXPECT_EQ("&", Lex.getNextToken().value());
+  EXPECT_EQ("fgh", Lex.getNextToken().value());
+}

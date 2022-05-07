@@ -6,7 +6,7 @@
 
 class Parser {
 private:
-  Lexer Lexer;
+  Lexer &Lexer;
   Token CurrentToken;
   void verifyTokenAndAdvance(TokenType Type);
   ASTNode *expr();
@@ -15,7 +15,7 @@ private:
   ASTNode *set();
 
 public:
-  Parser(class Lexer Lexer);
+  Parser(class Lexer &Lexer);
   ASTNode *parse();
 };
 

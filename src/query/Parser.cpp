@@ -3,7 +3,7 @@
 #include "query/ast/WordASTNode.h"
 #include "query/except/QueryException.h"
 
-Parser::Parser(class Lexer Lexer)
+Parser::Parser(class Lexer &Lexer)
     : Lexer{Lexer}, CurrentToken{Lexer.getNextToken()} {}
 
 ASTNode *Parser::parse() { return this->expr(); }
@@ -11,8 +11,9 @@ ASTNode *Parser::parse() { return this->expr(); }
 void Parser::verifyTokenAndAdvance(TokenType Type) {
   if (this->CurrentToken.type() == Type) {
     this->CurrentToken = this->Lexer.getNextToken();
+  } else {
+    throw QueryException("Invalid Syntax");
   }
-  throw QueryException("Invalid Syntax");
 }
 
 /*
@@ -28,10 +29,10 @@ void Parser::verifyTokenAndAdvance(TokenType Type) {
  */
 ASTNode *Parser::expr() {
   ASTNode *Node{this->uset()};
-  if (this->CurrentToken.type() == TokenType::NOT) {
+  while (this->CurrentToken.type() == TokenType::NOT) {
     Token T(this->CurrentToken.type(), this->CurrentToken.value());
     this->verifyTokenAndAdvance(TokenType::NOT);
-    return new BinaryOpASTNode(Node, T, this->uset());
+    Node = new BinaryOpASTNode(Node, T, this->uset());
   }
   return Node;
 }
@@ -39,10 +40,10 @@ ASTNode *Parser::expr() {
 // uset  : nset (OR nset)*
 ASTNode *Parser::uset() {
   ASTNode *Node{this->nset()};
-  if (this->CurrentToken.type() == TokenType::OR) {
+  while (this->CurrentToken.type() == TokenType::OR) {
     Token T(this->CurrentToken.type(), this->CurrentToken.value());
     this->verifyTokenAndAdvance(TokenType::OR);
-    return new BinaryOpASTNode(Node, T, this->nset());
+    Node = new BinaryOpASTNode(Node, T, this->nset());
   }
   return Node;
 }
@@ -50,10 +51,10 @@ ASTNode *Parser::uset() {
 //  nset  : set (AND set)*
 ASTNode *Parser::nset() {
   ASTNode *Node{this->set()};
-  if (this->CurrentToken.type() == TokenType::AND) {
+  while (this->CurrentToken.type() == TokenType::AND) {
     Token T(this->CurrentToken.type(), this->CurrentToken.value());
     this->verifyTokenAndAdvance(TokenType::AND);
-    return new BinaryOpASTNode(Node, T, this->set());
+    Node = new BinaryOpASTNode(Node, T, this->set());
   }
   return Node;
 }
