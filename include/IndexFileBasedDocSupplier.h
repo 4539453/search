@@ -18,6 +18,7 @@ public:
   std::string getRootDir();
   Document *get() override;
   ~IndexFileBasedDocSupplier();
+  std::vector<Document> *documentList();
 };
 
 #endif

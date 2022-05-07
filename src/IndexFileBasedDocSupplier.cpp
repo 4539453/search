@@ -28,4 +28,8 @@ Document *IndexFileBasedDocSupplier::get() {
   return &((*DocumentList)[CurrentDocSeq++]);
 }
 
+std::vector<Document> *IndexFileBasedDocSupplier::documentList() {
+  return this->DocumentList;
+}
+
 IndexFileBasedDocSupplier::~IndexFileBasedDocSupplier() { delete DocumentList; }

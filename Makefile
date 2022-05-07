@@ -13,7 +13,7 @@ search : main.o astnode.o wordnode.o binaryopnode.o rcnvisitor.o \
 	interpreter.o parser.o lexer.o queryexcept.o token.o printvisitor.o \
 	simpletokenizer.o postingslist.o termrecord.o document.o \
 	ifbdocsupplier.o termidmapping.o trcompare.o plcompare.o \
-	invertedindex.o 
+	invertedindex.o trprinter.o
 	$(CC) $(LIBFLAGS) -o $@ $^ 
 
 main.o :
@@ -24,6 +24,9 @@ rcnvisitor.o:
 
 printvisitor.o:
 	$(COMPILE) $(SRCROOT)/query/ast/NodePrintVisitor.cpp 
+
+trprinter.o:
+	$(COMPILE) $(SRCROOT)/TermRecordPrinter.cpp
 
 token.o :
 	$(COMPILE) $(SRCROOT)/query/Token.cpp

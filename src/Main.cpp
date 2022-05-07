@@ -7,6 +7,7 @@
 #include "query/Parser.h"
 #include "query/ast/ResultComputingNodeVisitor.h"
 #include "util/SimpleTokenizer.h"
+#include "TermRecordPrinter.h"
 
 int main() {
   std::string DocFilesRoot = "../test/resources/txts/";
@@ -22,6 +23,9 @@ int main() {
   InvertedIndex IIndex;
   IIndex.build(IFBDocSupplier, Tokenizer, TermIDMap);
   ResultComputingNodeVisitor RCNVisitor(IIndex, TermIDMap);
+  
+  TermRecordPrinter TRPrinter(DocFilesRoot, IndexFileName);
+  
   std::string Query;
   std::cout << "Enter query string (Ctrl+D to exit) : ";
   while (getline(std::cin, Query)) {
@@ -38,6 +42,7 @@ int main() {
     }
     for (auto TRecord : Result) {
       std::cout << TRecord.docID() << '\n';
+      TRPrinter.print(TRecord);
     }
     std::cout << "Enter query string (Ctrl+D to exit) : ";
   }
