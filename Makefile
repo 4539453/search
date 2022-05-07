@@ -1,9 +1,9 @@
-CFLAGS=-c -Wall
 LIBFLAGS=-lboost_serialization
 GTESTFLAGS=-lgtest -lpthread
 SRCROOT=../src
 INCLUDEROOT=../include
-CC=clang++ -std=c++17 -I $(INCLUDEROOT)
+CC=clang++
+CFLAGS=-c -Wall -std=c++17 -I $(INCLUDEROOT)
 COMPILE=$(CC) $(CFLAGS) -o $@
 
 install : search
