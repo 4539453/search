@@ -34,7 +34,7 @@ int main() {
   TermRecordPrinter TRPrinter(DocFilesRoot, IndexFileName);
 
   std::string Query;
-  std::cout << "Enter query string (Ctrl+D to exit) : ";
+  std::cout << "Enter query string (^D to exit) : ";
   while (getline(std::cin, Query)) {
     Lexer Lexer(Query);
     Parser Parser(Lexer);
@@ -47,10 +47,10 @@ int main() {
       std::cout << "s.\n";
     }
     for (auto TRecord : Result) {
-      std::cout << TRecord.docID() << '\n';
+      // std::cout << TRecord.docID() << '\n';
       TRPrinter.print(TRecord);
     }
-    std::cout << "Enter query string (Ctrl+D to exit) : ";
+    std::cout << "Enter query string (^D to exit) : ";
   }
   std::cout << '\n';
   return 0;
