@@ -12,7 +12,7 @@
 #include "util/TermIDMapper.h"
 
 int main() {
-  std::string DocFilesRoot = "../test/resources/txts/";
+  std::string DocFilesRoot = "../resources/txts/";
   std::string IndexFileName = "index.txt";
   std::string MappingFileName = "TermIDMapping.txt";
   std::string MappingFilePath = DocFilesRoot + MappingFileName;
@@ -21,7 +21,6 @@ int main() {
   TermIDMapper TermIDMapper(SSupplier);
   TermIDMapper.createMap();
   TermIDMapper.serializeMapTo(MappingFilePath);
-
   TermIDMapping TermIDMap;
   TermIDMap.loadMappingFromFile(MappingFilePath);
 

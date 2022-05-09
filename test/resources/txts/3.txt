@@ -3,4 +3,4 @@ more doc3 test
 some more doc3
 
 
-test rexçć
+test
