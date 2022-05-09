@@ -8,7 +8,7 @@
 
 DocumentIndexFileBasedStringSupplier::DocumentIndexFileBasedStringSupplier(
     std::string TextFilesRoot, std::string IndexFileName)
-    : TextFilesRoot{TextFilesRoot}, IndexFileName{IndexFileName},
+    : IndexFileName{IndexFileName}, TextFilesRoot{TextFilesRoot},
       DocumentList{new std::vector<Document>()} {
   std::ifstream IndexFile(TextFilesRoot + IndexFileName);
   std::string LineInIndexFile;

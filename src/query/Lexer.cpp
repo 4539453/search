@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <array>
 
-Lexer::Lexer(const std::string &Text) : Text{Text}, Locale("C") {
+Lexer::Lexer(const std::string &Text) : Text{Text}, Locale("en_US.UTF-8") {
   Pos = 0;
   CurrentChar = Text[Pos];
 }

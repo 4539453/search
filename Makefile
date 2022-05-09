@@ -13,11 +13,14 @@ search : main.o astnode.o wordnode.o binaryopnode.o rcnvisitor.o \
 	interpreter.o parser.o lexer.o queryexcept.o token.o printvisitor.o \
 	simpletokenizer.o postingslist.o termrecord.o document.o \
 	ifbdocsupplier.o termidmapping.o trcompare.o plcompare.o \
-	invertedindex.o trprinter.o
+	invertedindex.o trprinter.o termidmapper.o difbssup.o
 	$(CC) $(LIBFLAGS) -o $@ $^ 
 
 main.o :
 	$(COMPILE) $(SRCROOT)/Main.cpp
+
+difbssup.o :
+	$(COMPILE) $(SRCROOT)/util/DocumentIndexFileBasedStringSupplier.cpp
 
 rcnvisitor.o:
 	$(COMPILE) $(SRCROOT)/query/ast/ResultComputingNodeVisitor.cpp 

@@ -7,7 +7,7 @@
 #include <vector>
 
 TermIDMapper::TermIDMapper(class StringSupplier &StringSupplier)
-    : StringSupplier{StringSupplier}, TermIDMap{}, CurrentID{0} {}
+    : StringSupplier{StringSupplier}, CurrentID{0}, TermIDMap{} {}
 
 void TermIDMapper::createMap() {
   SimpleTokenizer Tokenizer{};

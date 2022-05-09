@@ -2,18 +2,25 @@
 
 #include "IndexFileBasedDocSupplier.h"
 #include "InvertedIndex.h"
+#include "TermRecordPrinter.h"
 #include "query/Interpreter.h"
 #include "query/Lexer.h"
 #include "query/Parser.h"
 #include "query/ast/ResultComputingNodeVisitor.h"
+#include "util/DocumentIndexFileBasedStringSupplier.h"
 #include "util/SimpleTokenizer.h"
-#include "TermRecordPrinter.h"
+#include "util/TermIDMapper.h"
 
 int main() {
   std::string DocFilesRoot = "../test/resources/txts/";
   std::string IndexFileName = "index.txt";
   std::string MappingFileName = "TermIDMapping.txt";
   std::string MappingFilePath = DocFilesRoot + MappingFileName;
+
+  DocumentIndexFileBasedStringSupplier SSupplier(DocFilesRoot, IndexFileName);
+  TermIDMapper TermIDMapper(SSupplier);
+  TermIDMapper.createMap();
+  TermIDMapper.serializeMapTo(MappingFilePath);
 
   TermIDMapping TermIDMap;
   TermIDMap.loadMappingFromFile(MappingFilePath);
@@ -22,10 +29,11 @@ int main() {
   SimpleTokenizer Tokenizer;
   InvertedIndex IIndex;
   IIndex.build(IFBDocSupplier, Tokenizer, TermIDMap);
+
   ResultComputingNodeVisitor RCNVisitor(IIndex, TermIDMap);
-  
+
   TermRecordPrinter TRPrinter(DocFilesRoot, IndexFileName);
-  
+
   std::string Query;
   std::cout << "Enter query string (Ctrl+D to exit) : ";
   while (getline(std::cin, Query)) {
@@ -33,7 +41,6 @@ int main() {
     Parser Parser(Lexer);
     Interpreter Interpreter(Parser, RCNVisitor);
     auto Result = Interpreter.computeSearchResult();
-    // TODO add details and pretty print result
     std::cout << Result.size() << " result";
     if (Result.size() == 1) {
       std::cout << ".\n";
