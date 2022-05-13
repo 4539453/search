@@ -1,0 +1,7 @@
+/* settings.json */
+{
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "C_Cpp.default.intelliSenseMode": "linux-clang-x64",
+  "C_Cpp.default.compilerPath": "/usr/bin/clang"
+}

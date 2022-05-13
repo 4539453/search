@@ -1,0 +1,44 @@
+/* tasks.json */
+// Run build: Ctrl + Shift + B
+// Run debug: F5
+/* 
+	DON'T FORGET <-g -fno-limit-debug-info> flags in Makefile for debugging
+
+	https://stackoverflow.com/questions/39262055/lldb-cant-debug-string-when-compiled-by-clang
+	https://bugs.llvm.org/show_bug.cgi?id=24202
+	https://wiki.archlinux.org/title/Debugging/Getting_traces
+*/
+{
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "C/C++: clang++ build active file",
+      /* For single file */
+      // "command": "/usr/bin/clang++",
+      /* For Makefile */
+      "command": "",
+      "args": [
+        /* For single file */
+        // "-std=c++20",
+        // "-g",
+        // "${file}",
+        // "-o",
+        // "${fileDirname}/${fileBasenameNoExtension}"
+        /* For Makefile in ./build folder */
+        "make",
+        "--directory=${workspaceFolder}/build"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ],
+  "version": "2.0.0"
+}

@@ -1,5 +1,4 @@
 *.out
 *.o
 *.swp
-.vscode
 *.code-workspace
