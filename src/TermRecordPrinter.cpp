@@ -1,6 +1,7 @@
 #include "TermRecordPrinter.h"
 #include "IndexFileBasedDocSupplier.h"
 #include <iostream>
+#include <fstream>
 
 TermRecordPrinter::TermRecordPrinter(std::string FilesRoot,
                                      std::string IndexFileName)
@@ -15,8 +16,9 @@ void TermRecordPrinter::print(TermRecord &TR) {
   auto Doc = this->DocIDMap.at(TR.docID());
   auto DocFilePath = Doc.getFilePath();
   std::cout << "Title : " << Doc.getTitle() << '\n';
-  std::cout << "Author : " << Doc.getAuthor() << '\n';
+  std::cout << "Author : " << Doc.getAuthor() << "\n\n";
   this->showTextAroundTwoOccurences(Doc, TR);
+  std::cout << "\n\n";
 }
 
 void TermRecordPrinter::printAll(
@@ -37,5 +39,17 @@ void TermRecordPrinter::showTextAroundTwoOccurences(Document &Doc,
   if (PosIt != TermPositions.end()) {
     SecondOcc = *PosIt;
   }
+
   // TODO show text from the doc highlighting query words
+  std::string text = "";
+  std::ifstream Ifs(Doc.getFilePath(), std::ios::in | std::ios::binary);
+  Ifs.seekg(0, std::ios::end);
+  text.resize(Ifs.tellg());
+  Ifs.seekg(0, std::ios::beg);
+  Ifs.read(text.data(), text.size());
+  Ifs.close();
+
+  auto firstTermPosition = TR.termPositions()[0];
+  std::string_view textToPrint = text;
+  std::cout << textToPrint.substr(firstTermPosition, 40) << std::endl;
 }

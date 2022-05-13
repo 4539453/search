@@ -4,6 +4,7 @@
 #include "Document.h"
 #include "util/StringSupplier.h"
 #include <string>
+#include <vector>
 
 class DocumentIndexFileBasedStringSupplier : public StringSupplier {
 private:
